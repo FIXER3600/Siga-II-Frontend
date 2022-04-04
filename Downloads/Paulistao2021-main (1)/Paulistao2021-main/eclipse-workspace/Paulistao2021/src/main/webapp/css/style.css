@@ -1,0 +1,80 @@
+@charset "ISO-8859-1";
+* {
+	box-sizing: border-box;
+      }
+body{
+	background-color:#004386;
+	color:white;
+	font-family:"Arial";
+	font-weight:600;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+.grupos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100%;
+  margin: 0 auto -50px;
+  padding: 20px;
+}
+.jogos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.jogos table{
+	border:1px solid #FE172E;
+}
+img{
+	width:20em;
+	height: 12em;
+	text-align: center;
+}
+.botao{
+	background-color: #004DB9;
+	padding: 1em;
+	color: white;
+	font-weight: 600;
+	border-radius: 8px;
+	border-style: none;
+	font-family:"Arial";
+	cursor: pointer;
+}
+.botao:hover{
+	background-color: #074c92;
+}
+.grupos-table{
+	text-align: center;
+	border:1px solid #FE172E;
+	border-radius: 8px;
+}
+.header{
+	background-color: aliceblue;
+	padding: 0.5em;
+
+}
+ul a{
+	list-style: none;
+	text-decoration: none;
+	color: black;
+}
+.link-grupos:hover{
+	color: #004DB9;
+}
+.link-jogos:hover{
+	color: #FE172E;
+}/*
+.footer{
+	background-color: aliceblue;
+	padding: 0.5em;
+	text-align: center;
+}
+.footer a{
+	text-decoration: none;
+	color: black;
+}*/

@@ -38,7 +38,7 @@
 						<td align="center"><c:out value="${j.getTimeA()}"></c:out></td>
 						<td align="center"><c:out value="${j.getTimeB()}"></c:out></td>
 						<td align="center"><c:out value="${j.getGolsTimeA()}"></c:out></td>
-						<td align="center"><c:out value="${j.getGolsTimeA()}"></c:out></td>
+						<td align="center"><c:out value="${j.getGolsTimeB()}"></c:out></td>
 						<td align="center"><c:out value="${j.getData()}"></c:out></td>
 					</tr>
 				</c:forEach>

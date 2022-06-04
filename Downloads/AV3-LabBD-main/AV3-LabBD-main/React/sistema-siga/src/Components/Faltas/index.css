@@ -1,0 +1,15 @@
+.link{
+  text-decoration: none;
+  color:white;
+  
+}
+
+.link:hover{
+  text-decoration: none;
+  color:white;
+  
+}
+
+.container{
+  margin: 4rem 8rem;
+}

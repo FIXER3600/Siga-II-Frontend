@@ -9,3 +9,12 @@
 #inputAvaliacao{
   width: 10rem;
 }
+#botaoEnviaFalta{
+  border-radius: 8px;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -50,11 +50,14 @@ export default function AlunosLista({ avaliacao }) {
     e.preventDefault()
     geraAluno()
 
-    await api.put('alunos/nota/' + avaliacao.codigo, jsonAlunoNota, {
+    await api.put('/alunos/nota/' + avaliacao.codigo, jsonAlunoNota, {
       headers: {
         'content-type': 'application/json'
       }
-    })
+      
+    }).then((res)=>{
+    console.log(jsonAlunoNota)
+    console.log("Notas enviadas")}).catch((error)=>console.log(error.message))
   }
 
   function geraAluno() {
@@ -76,12 +79,12 @@ export default function AlunosLista({ avaliacao }) {
     }
 
     jsonAlunoNota = JSON.stringify(alunos);
-
+console.log(jsonAlunoNota);
   }
 
   return (
 
-    <Form action="/teste" method="POST" onSubmit={handleSubmit} id="form">
+    <Form action="/teste" method="PUT" onSubmit={handleSubmit} id="form">
       <Table striped bordered hover className="mt-1">
         <thead>
           <tr>
@@ -117,7 +120,7 @@ export default function AlunosLista({ avaliacao }) {
       </Table>
 
       <Button variant="primary" type="submit">
-        Enviar notas
+        Enviar
     </Button>
 
     </Form>

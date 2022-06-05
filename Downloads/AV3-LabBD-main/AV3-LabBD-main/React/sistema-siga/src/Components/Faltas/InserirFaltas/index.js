@@ -39,7 +39,7 @@ export default function InserirFaltas() {
 
 
   async function loadCursos() {
-    await api.get("cursos")
+    await api.get("/cursos")
       .then((response) => {
         setCurso(response.data)
 
@@ -52,7 +52,7 @@ export default function InserirFaltas() {
   }
 
   async function loadDisciplina(curso) {
-    await api.get("disciplinas/curso/" + curso.codigo)
+    await api.get("/disciplinas/curso/" + curso.codigo)
       .then((response) => {
         setDisciplina(response.data)
 
@@ -132,10 +132,6 @@ export default function InserirFaltas() {
             <Form.Label>Data</Form.Label>
             <input type="date" className="form-control" value={dataSelecionada} onChange={selectData} />
           </Col>
-
-
-
-
 
         </Row>
       </Form>

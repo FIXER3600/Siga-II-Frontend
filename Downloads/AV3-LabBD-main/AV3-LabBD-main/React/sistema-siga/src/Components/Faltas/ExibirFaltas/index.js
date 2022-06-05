@@ -38,7 +38,7 @@ export default function ExibirFaltas() {
 
 
   async function loadCursos() {
-    await api.get("cursos")
+    await api.get("/cursos")
       .then((response) => {
         setCurso(response.data)
 
@@ -51,7 +51,7 @@ export default function ExibirFaltas() {
   }
 
   async function loadDisciplina(curso) {
-    await api.get("disciplinas/curso/" + curso.codigo)
+    await api.get("/disciplinas/curso/" + curso.codigo)
       .then((response) => {
         setDisciplina(response.data)
 
@@ -94,20 +94,7 @@ export default function ExibirFaltas() {
   return (
     <div className="containerNotas">
 
-      <Row>
-        <Col>
-          <h1>Visualizar  Notas</h1>
-        </Col>
-
-        <Col >
-          <Button className="botao-relatorio" onClick={emiteRelatorio}>
-            Gerar Relatório
-          </Button>
-        </Col>
-      </Row>
-
-
-
+          <h1>Visualizar  Faltas</h1>
       <Form>
         <Row className="mt-4">
           <Col>
@@ -134,6 +121,9 @@ export default function ExibirFaltas() {
       <h3 className="mt-5">Lista de Alunos</h3>
 
       <AlunosListaFaltas disciplina={disciplinaSelecionada} />
+      <Button className="botao-relatorio" variant='info' onClick={emiteRelatorio}>
+            Relatório
+          </Button>
     </div>
   )
 }

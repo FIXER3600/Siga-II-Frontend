@@ -10,15 +10,17 @@ export default function Faltas() {
       <Row xs={1} md={2} className="row justify-content-center">
         <Col>
           <Button className="mt-3">
-            <Link to="/inserirFaltas" className="link"> Inserir Faltas</Link>
+            <Link to="/inserirFaltas" className="link"> Inserir</Link>
           </Button>
         </Col>
+        </Row>
+        <Row>
         <Col>
-          <Button>
-            <Link to="/visualizarFaltas" className="link"> Vizualizar Faltas</Link>
+          <Button variant={"info"}>
+            <Link to="/visualizarFaltas"  className="link"> Vizualizar</Link>
           </Button>
         </Col>
-      </Row>
+        </Row>
 
 
 

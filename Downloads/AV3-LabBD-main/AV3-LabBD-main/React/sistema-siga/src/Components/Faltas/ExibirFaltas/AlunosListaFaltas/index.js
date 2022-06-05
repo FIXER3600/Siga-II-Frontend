@@ -8,7 +8,7 @@ export default function AlunosListaFaltas({ disciplina }) {
   var [dataAula, setDataAula] = useState([])
 
   async function loadAlunoFalta(disciplina) {
-    await api.get("faltas/" + disciplina.codigo)
+    await api.get("/faltas/" + disciplina.codigo)
       .then((response) => {
         setAlunoFalta(response.data)
 
@@ -21,7 +21,7 @@ export default function AlunosListaFaltas({ disciplina }) {
 
 
   async function loadDataAula(disciplina) {
-    await api.get("faltas/datas-aula/" + disciplina.codigo)
+    await api.get("/faltas/datas-aula/" + disciplina.codigo)
       .then((response) => {
         setDataAula(response.data)
 
@@ -148,13 +148,8 @@ export default function AlunosListaFaltas({ disciplina }) {
             </tr>
           ))
         }
-
       </tbody>
-
     </Table>
-
-
-
   )
 
 }

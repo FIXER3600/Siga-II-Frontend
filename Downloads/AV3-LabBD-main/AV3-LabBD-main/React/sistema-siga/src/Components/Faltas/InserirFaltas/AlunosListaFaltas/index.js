@@ -17,7 +17,7 @@ export default function AlunosListaFaltas({ disciplina, dataSelecionada }) {
   async function loadAlunos(disciplina, dataSelecionada) {
 
     if (disciplina.codigo !== undefined) {
-      await api.get("faltas/" + disciplina.codigo + "/" + dataSelecionada)
+      await api.get("/faltas/" + disciplina.codigo + "/" + dataSelecionada)
         .then((response) => {
 
           setAlunoFalta(response.data)
@@ -37,7 +37,7 @@ export default function AlunosListaFaltas({ disciplina, dataSelecionada }) {
     e.preventDefault()
     geraAlunoFalta()
 
-    await api.put('faltas', jsonAlunoFalta, {
+    await api.put('/faltas', jsonAlunoFalta, {
       headers: {
         'content-type': 'application/json'
       }
@@ -119,9 +119,9 @@ export default function AlunosListaFaltas({ disciplina, dataSelecionada }) {
         </tbody>
 
       </Table>
-
-      <Button variant="primary" type="submit">
-        Enviar faltas
+          
+      <Button id="botaoEnviaFalta" variant="primary" type="submit">
+        Enviar
     </Button>
 
     </Form>

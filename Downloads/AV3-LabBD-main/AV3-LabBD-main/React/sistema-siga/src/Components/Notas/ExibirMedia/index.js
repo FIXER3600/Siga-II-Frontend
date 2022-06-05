@@ -88,27 +88,9 @@ export default function ExibirMedia() {
     }
     setDisciplinaSelecionada(disciplina)
   }
-
-
-
-
-
   return (
-
-
     <div className="containerNotas">
-      <Row>
-        <Col xs={10}>
           <h1>Visualizar  Notas</h1>
-        </Col>
-        <Col >
-          <Button className="botao-relatorio" onClick={emiteRelatorio}>
-            Gerar Relatório
-          </Button>
-        </Col>
-      </Row>
-
-
       <Form>
         <Row className="mt-4">
           <Col>
@@ -135,6 +117,12 @@ export default function ExibirMedia() {
       <h3 className="mt-5">Lista de Alunos</h3>
 
       <AlunosLista disciplina={disciplinaSelecionada} />
+      
+      
+          <Button className="botao-relatorio" variant='info' onClick={emiteRelatorio}>
+            Relatório
+          </Button>
+       
     </div>
   )
 }
